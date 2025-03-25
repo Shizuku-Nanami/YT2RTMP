@@ -2,7 +2,8 @@
 
 A tool for streaming YouTube videos to other live streaming platforms.
 
-[English](README.md)|[中文](README_Zh-CN.md)
+[![English](https://img.shields.io/badge/lang-English-blue)](README.md)
+[![中文](https://img.shields.io/badge/lang-中文-red)](README_Zh-CN.md)
 
 ## Features
 

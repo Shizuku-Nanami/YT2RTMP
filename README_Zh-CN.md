@@ -2,7 +2,8 @@
 
 一个用于将 YouTube 视频转推到其他直播平台的工具。
 
-[English](README.md)|[中文](README_Zh-CN.md)
+[![English](https://img.shields.io/badge/lang-English-blue)](README.md)
+[![中文](https://img.shields.io/badge/lang-中文-red)](README_Zh-CN.md)
 
 ## 功能特性
 
