@@ -1,130 +1,131 @@
-# Y2R 推流工具
+# Y2R Streaming Tool
 
-一个用于将 YouTube 视频转推到其他直播平台的工具。
+A tool for streaming YouTube videos to other live streaming platforms.
 
-## 功能特性
+[English](README.md)|[中文](README_Zh-CN.md)
 
-- YouTube 视频实时转推
-- 多路流同时管理
-- 实时状态监控
-- WebSocket 实时通信
-- 支持 Python 和 Go 两种后端实现
+## Features
 
-## 技术栈
+- Real-time YouTube video streaming
+- Multi-stream management
+- Real-time status monitoring
+- WebSocket real-time communication
+- Support for both Python and Go backend implementations
 
-### 后端
-- Python 实现:
+## Tech Stack
+
+### Backend
+- Python Implementation:
   - FastAPI
   - python-socketio
   - python-dotenv
   
-- Go 实现:
+- Go Implementation:
   - Gin
   - go-socket.io
   - godotenv
 
-### 前端
+### Frontend
 - Vue.js
 - Socket.IO Client
 - Tailwind CSS
 
-## 项目结构
+## Project Structure
 ```tree
 .
-├── .env                    # 后端环境变量配置
-├── nginx.conf             # Nginx配置文件
-├── backend/               # Python后端
-│   ├── main.py           # 主程序
-│   └── requirements.txt   # 依赖配置
-├── backend-go/            # Go后端
-│   ├── main.go           # 主程序
-│   └── go.mod            # Go依赖配置
-└── frontend/             # Vue.js前端
-    ├── .env              # 前端环境变量配置
-    ├── src/              # 源代码
-    │   ├── App.vue       # 主应用组件
-    │   ├── main.js       # 入口文件
-    │   └── components/   # 组件目录
-    └── package.json      # 项目配置
+├── .env                    # Backend environment variables
+├── nginx.conf             # Nginx configuration
+├── backend/               # Python backend
+│   ├── main.py           # Main program
+│   └── requirements.txt   # Dependencies
+├── backend-go/            # Go backend
+│   ├── main.go           # Main program
+│   └── go.mod            # Go dependencies
+└── frontend/             # Vue.js frontend
+    ├── .env              # Frontend environment variables
+    ├── src/              # Source code
+    │   ├── App.vue       # Main application component
+    │   ├── main.js       # Entry file
+    │   └── components/   # Components directory
+    └── package.json      # Project configuration
 ```
 
-## 环境要求
+## Requirements
 
 - Node.js >= 14
-- Python >= 3.8 或 Go >= 1.16
+- Python >= 3.8 or Go >= 1.16
 - FFmpeg
 - yt-dlp
 
-## 环境变量配置
+## Environment Variables
 
-### 后端配置（根目录 .env）
+### Backend Configuration (root .env)
 ```env
 DOMAIN_URL=https://your-domain.com
 COOKIES_PATH=/path/to/cookies.txt
 ```
 
-### 前端配置（frontend/.env）
+### Frontend Configuration (frontend/.env)
 ```env
 REACT_APP_DOMAIN_URL=https://your-domain.com
 ```
 
-## 安装部署
+## Installation
 
-1. 克隆项目
+1. Clone the repository
 ```bash
 git clone <repository-url>
 cd <project-directory>
 ```
 
-2. 安装后端依赖
+2. Install backend dependencies
 ```bash
-# Python后端
+# Python backend
 cd backend
 pip install -r requirements.txt
 
-# 或 Go后端
+# Or Go backend
 cd backend-go
 go mod download
 ```
 
-3. 安装前端依赖
+3. Install frontend dependencies
 ```bash
 cd frontend
 npm install
 ```
 
-4. 配置环境变量
-- 复制 `.env.example` 到 `.env` 并修改配置
-- 复制 `frontend/.env.example` 到 `frontend/.env` 并修改配置
+4. Configure environment variables
+- Copy `.env.example` to `.env` and modify the configuration
+- Copy `frontend/.env.example` to `frontend/.env` and modify the configuration
 
-5. 启动服务
+5. Start the services
 ```bash
-# 启动后端（选择其一）
+# Start backend (choose one)
 cd backend
 python main.py
-# 或
+# or
 cd backend-go
 go run main.go
 
-# 启动前端
+# Start frontend
 cd frontend
 npm run serve
 ```
 
-## 使用说明
+## Usage
 
-1. 访问前端页面
-2. 输入 YouTube 视频链接
-3. 输入目标平台的 RTMP 地址和推流密钥
-4. 点击开始推流
+1. Access the frontend page
+2. Enter the YouTube video URL
+3. Enter the target platform's RTMP URL and stream key
+4. Click start streaming
 
-## 注意事项
+## Notes
 
-- 确保已正确配置 cookies.txt 文件
-- 确保有足够的网络带宽
-- 注意遵守相关平台的推流规则
+- Ensure cookies.txt file is properly configured
+- Ensure sufficient network bandwidth
+- Follow the streaming rules of relevant platforms
 
 ## License
 
-[MIT](LICENSE) 
->>>>>>> Stashed changes
+[Apache License Version 2.0](LICENSE) 
