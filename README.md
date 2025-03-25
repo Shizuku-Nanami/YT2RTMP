@@ -85,9 +85,10 @@ cd <project-directory>
 cd backend
 pip install -r requirements.txt
 
-# Or Go backend
-cd backend-go
-go mod download
+# Or Go backend (!!Recommended!!)
+cd backend-go  
+go mod tidy  
+go bulid  
 ```
 
 3. Install frontend dependencies
@@ -102,12 +103,13 @@ npm install
 
 5. Start the services
 ```bash
-# Start backend (choose one)
+# Start Python backend (choose one)
 cd backend
 python main.py
-# or
+# or GO backend 
+# (Needs to be in the same path as the .env file)
 cd backend-go
-go run main.go
+./yt2rtmp
 
 # Start frontend
 cd frontend

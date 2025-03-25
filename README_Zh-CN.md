@@ -79,15 +79,16 @@ git clone <repository-url>
 cd <project-directory>
 ```
 
-2. 安装后端依赖
+1. 安装后端依赖
 ```bash
 # Python后端
 cd backend
 pip install -r requirements.txt
 
-# 或 Go后端
-cd backend-go
-go mod download
+# 或 Go后端 (!!推荐!!)
+cd backend-go  
+go mod tidy  
+go bulid  
 ```
 
 3. 安装前端依赖
@@ -102,12 +103,13 @@ npm install
 
 5. 启动服务
 ```bash
-# 启动后端（选择其一）
+# 启动Python后端（选择其一）
 cd backend
 python main.py
-# 或
+# 或启动GO后端 
+# (需要和.env文件位于同路径)
 cd backend-go
-go run main.go
+./yt2rtmp
 
 # 启动前端
 cd frontend
