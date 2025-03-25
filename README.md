@@ -1,7 +1,3 @@
-<<<<<<< Updated upstream
-# YT2RTMP
- 
-=======
 # Y2R 推流工具
 
 一个用于将 YouTube 视频转推到其他直播平台的工具。
